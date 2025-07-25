@@ -38,22 +38,15 @@ public class WaypointMenuScreen extends Screen {
 
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        if(keyCode == GLFW.GLFW_KEY_M){
+        boolean handled = super.keyPressed(keyCode, scanCode, modifiers);
+        boolean isEntryFocused = listWidget.getFocused() != null;
+
+        if(!handled && !isEntryFocused && keyCode == GLFW.GLFW_KEY_M){
             this.close();
             return true;
         }
 
-        return super.keyPressed(keyCode, scanCode, modifiers);
-    }
-
-    @Override
-    public boolean charTyped(char chr, int modifiers) {
-        if(chr == 'm'){
-            this.close();
-            return true;
-        }
-
-        return this.getFocused() != null && this.getFocused().charTyped(chr, modifiers);
+        return handled;
     }
 
     private void initFooter(){

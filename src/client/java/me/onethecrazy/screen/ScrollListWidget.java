@@ -110,26 +110,6 @@ public class ScrollListWidget extends ElementListWidget<ScrollListWidget.Waypoin
         return 500;
     }
 
-    @Override
-    public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        if(keyCode == GLFW.GLFW_KEY_M){
-            this.screen.close();
-            return true;
-        }
-
-        return super.keyPressed(keyCode, scanCode, modifiers);
-    }
-
-    @Override
-    public boolean charTyped(char chr, int modifiers) {
-        if(chr == 'm'){
-            this.screen.close();
-            return true;
-        }
-
-        return this.getFocused() != null && this.getFocused().charTyped(chr, modifiers);
-    }
-
     public static class WaypointEntry extends ElementListWidget.Entry<WaypointEntry>{
         private final Waypoint wp;
         private final ScrollListWidget screenContainer;
