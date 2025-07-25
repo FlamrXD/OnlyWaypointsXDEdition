@@ -7,6 +7,7 @@ This Mod is a Quality Of Life Mod generally indented for SMP-like gameplay, thou
 - Waypoints
   - Labels (Displays Name & Distance)
   - Beacon Beams (Fades away as you  get close)
+- Creates a Waypoint when you die
 - Polished GUI with a Vanilla Feel
 - Command Interface
 - Works on Multiplayer and Singleplayer
