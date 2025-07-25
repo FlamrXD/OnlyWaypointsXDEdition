@@ -3,13 +3,12 @@
 	"id": "onlywaypoints",
 	"version": "${version}",
 	"name": "OnlyWaypoints",
-	"description": "Adds clean and simple Waypoints to minecraft",
+	"description": "Adds clean and simple bloat-free Waypoints to minecraft",
 	"authors": [
 		"1TheCrazy"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/1TheCrazy/OnlyWaypoints"
 	},
 	"license": "MIT",
 	"icon": "assets/onlywaypoints/icon.png",
