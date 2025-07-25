@@ -77,7 +77,7 @@ public class OnlyWaypointsClient implements ClientModInitializer {
 		var TOGGLE_VISIBILITY_HOTKEY = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 				"key.onlywaypoints.toggle_visibility",
 				InputUtil.Type.KEYSYM,
-				GLFW.GLFW_KEY_T,
+				GLFW.GLFW_KEY_K,
 				Text.translatable("category.onlywaypoints").getString()
 		));
 
