@@ -1,0 +1,9 @@
+{
+  "gui.onlywaypoints.open_menu" : "Open Waypoint Menu",
+  "gui.onlywaypoints.last_death" : "Last Death",
+  "gui.onlywaypoints.new_waypoint_placeholder" : "New Waypoint",
+  "key.onlywaypoints.toggle_visibility" : "Toggle Waypoint Visibility",
+  "key.onlywaypoints.add_waypoint" : "Add Waypoint",
+  "key.onlywaypoints.remove_waypoint" : "Delete Waypoint",
+  "category.onlywaypoints": "Only Waypoints"
+}

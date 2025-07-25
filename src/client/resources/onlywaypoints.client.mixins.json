@@ -1,11 +1,14 @@
 {
-	"required": true,
-	"package": "me.onethecrazy.mixin.client",
-	"compatibilityLevel": "JAVA_21",
-	"client": [
-		"ExampleClientMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "me.onethecrazy.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "PauseScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "ClientDeathHook"
+  ]
 }
