@@ -1,7 +1,7 @@
 package me.onethecrazy.onlywaypoints;
 
 import me.onethecrazy.OnlyWaypoints;
-import me.onethecrazy.onlywaypoints.Commands;
+import me.onethecrazy.onlywaypoints.commands.Commands;
 import me.onethecrazy.onlywaypoints.screen.WaypointMenuScreen;
 import me.onethecrazy.onlywaypoints.util.FileUtil;
 import me.onethecrazy.onlywaypoints.waypoints.WaypointManager;

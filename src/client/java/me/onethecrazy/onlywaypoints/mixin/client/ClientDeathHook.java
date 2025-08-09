@@ -1,4 +1,4 @@
-package me.onethecrazy.mixin.client;
+package me.onethecrazy.onlywaypoints.mixin.client;
 
 import me.onethecrazy.onlywaypoints.waypoints.WaypointManager;
 import me.onethecrazy.onlywaypoints.waypoints.objects.Coordinates;

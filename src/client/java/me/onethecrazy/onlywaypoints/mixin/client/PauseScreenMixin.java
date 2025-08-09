@@ -1,4 +1,4 @@
-package me.onethecrazy.mixin.client;
+package me.onethecrazy.onlywaypoints.mixin.client;
 
 import me.onethecrazy.onlywaypoints.screen.WaypointMenuScreen;
 import net.minecraft.client.gui.screen.GameMenuScreen;

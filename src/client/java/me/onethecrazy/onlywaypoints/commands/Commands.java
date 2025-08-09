@@ -1,4 +1,4 @@
-package me.onethecrazy.onlywaypoints;
+package me.onethecrazy.onlywaypoints.commands;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
