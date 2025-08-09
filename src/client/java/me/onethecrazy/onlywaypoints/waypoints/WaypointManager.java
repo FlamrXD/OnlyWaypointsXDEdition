@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import me.onethecrazy.OnlyWaypoints;
 import me.onethecrazy.onlywaypoints.OnlyWaypointsClient;
 import me.onethecrazy.mixin.ServerAccessor;
+import me.onethecrazy.onlywaypoints.mixin.client.GameRendererAccessor;
 import me.onethecrazy.onlywaypoints.util.BeamRenderer;
 import me.onethecrazy.onlywaypoints.util.FileUtil;
 import me.onethecrazy.onlywaypoints.waypoints.objects.Coordinates;
@@ -145,67 +146,67 @@ public class WaypointManager {
         }
     }
 
-    private static void renderLabel(Waypoint wp, DrawContext ctx, RenderTickCounter tick){
+    private static void renderLabel(Waypoint wp, DrawContext ctx, RenderTickCounter tick) {
         MinecraftClient client = MinecraftClient.getInstance();
-        Camera camera = client.gameRenderer.getCamera();
+        GameRenderer renderer = client.gameRenderer;
+        Camera camera = renderer.getCamera();
         Vec3d camPos = camera.getPos();
         Window window = client.getWindow();
 
         // Construct projection Matrix
-        float fovRad = (float)Math.toRadians(client.options.getFov().getValue());
-        float aspect = (float)window.getScaledWidth() / window.getScaledHeight();
-        float near = 0.05F;
-        float far = client.options.getViewDistance().getValue() * 16.0F;
-        Matrix4f projMatrix = new Matrix4f()
-                .identity()
-                .perspective(fovRad, aspect, near, far);
+        float tickDelta = tick.getTickProgress(true);
+        double fovDeg = ((GameRendererAccessor) renderer).invokeGetFov(camera, tickDelta, true);
+        Matrix4f projMatrix = renderer.getBasicProjectionMatrix((float) fovDeg);
 
-        // Construct view matrix
+        // Construct View matrix
         float pitch = camera.getPitch();
         float yaw   = camera.getYaw();
         Matrix4f viewMatrix = new Matrix4f()
                 .identity()
-                .rotateX((float)Math.toRadians(pitch))
-                .rotateY((float)Math.toRadians(yaw))
+                .rotateX((float) Math.toRadians(pitch))
+                .rotateY((float) Math.toRadians(yaw))
                 .translate(
-                        (float)-camPos.x,
-                        (float)-camPos.y,
-                        (float)-camPos.z
-                )
-                .translate(0f, 0f, 0);
+                        (float) -camPos.x,
+                        (float) -camPos.y,
+                        (float) -camPos.z
+                );
 
-
+        // World Pos of the label
         Vec3d worldPos = new Vec3d(
                 wp.coordinates.x + 0.5,
                 wp.coordinates.y + 1,
-                wp.coordinates.z + 0.5);
+                wp.coordinates.z + 0.5
+        );
 
+        // Project to clip space
         Vector4f clip = new Vector4f(
-                (float)worldPos.x,
-                (float)worldPos.y - 2f * ((float)worldPos.y - (float)camPos.y),
-                (float)worldPos.z,
+                (float) worldPos.x,
+                (float) worldPos.y - 2f * ((float)worldPos.y - (float)camPos.y), // Wierd fix for label y being added the diff between label y and player y (*2)
+                (float) worldPos.z,
                 1f
         );
 
         viewMatrix.transform(clip);
         projMatrix.transform(clip);
 
-        // Not in camera space
-        if(clip.w() >= 0f) return;
+        // Cull behind camera
+        if (clip.w() >= 0f) return;
 
-
-
-        // Evil projection fuckery
+        // Evil Projection Fuckery
         float ndcX = clip.x() / clip.w();
         float ndcY = clip.y() / clip.w();
         int sw = window.getScaledWidth();
         int sh = window.getScaledHeight();
-        int sx = (int)((ndcX * 0.5f + 0.5f) * sw);
-        int sy = (int)((1f - (ndcY * 0.5f + 0.5f)) * sh);
+        int sx = (int) ((ndcX * 0.5f + 0.5f) * sw);
+        int sy = (int) ((1f - (ndcY * 0.5f + 0.5f)) * sh);
 
-        // Draw
+        // Distance gate
+        if (worldPos.distanceTo(camPos) > OnlyWaypointsClient.options().dontRenderAfterDistance)
+            return;
+
+        // Draw Background + Text
         TextRenderer tr = client.textRenderer;
-        Text txt = Text.of(wp.name + " [" + (int)worldPos.distanceTo(camPos) + "m]");
+        Text txt = Text.of(wp.name + " [" + (int) worldPos.distanceTo(camPos) + "m]");
         int color = 0xFFFFFFFF;
 
         float textWidth = tr.getWidth(txt);
@@ -213,16 +214,18 @@ public class WaypointManager {
         float xOffset = textWidth / 2f;
         int margin = 2;
 
-        if(worldPos.distanceTo(camPos) > OnlyWaypointsClient.options().dontRenderAfterDistance)
-            return;
+        ctx.fill(
+                sx - margin - (int) xOffset,
+                sy - margin,
+                sx + (int) xOffset + margin,
+                sy + (int) textHeight + margin,
+                ColorHelper.withAlpha(0.5f, 0x000000)
+        );
 
-        ctx.fill(sx - margin - (int)xOffset, sy - margin, sx + (int)xOffset + margin, sy + (int)textHeight + margin, ColorHelper.withAlpha(0.5f, 0x000000));
-
-        // Draw Text
         ctx.drawText(
                 tr,
                 txt,
-                sx - (int)xOffset,
+                sx - (int) xOffset,
                 sy,
                 color,
                 true
