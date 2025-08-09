@@ -1,7 +1,7 @@
-package me.onethecrazy.util.onlywaypoints;
+package me.onethecrazy.onlywaypoints.util;
 
 import com.google.gson.Gson;
-import me.onethecrazy.OnlyWaypointClientOptions;
+import me.onethecrazy.onlywaypoints.OnlyWaypointClientOptions;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.IOException;

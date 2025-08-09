@@ -1,7 +1,7 @@
-package me.onethecrazy.screen;
+package me.onethecrazy.onlywaypoints.screen;
 
-import me.onethecrazy.waypoints.WaypointManager;
-import me.onethecrazy.waypoints.objects.Waypoint;
+import me.onethecrazy.onlywaypoints.waypoints.WaypointManager;
+import me.onethecrazy.onlywaypoints.waypoints.objects.Waypoint;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.Element;
@@ -10,7 +10,6 @@ import net.minecraft.client.gui.widget.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.ColorHelper;
 import org.joml.Vector2i;
-import org.lwjgl.glfw.GLFW;
 
 import java.util.List;
 import java.util.Objects;

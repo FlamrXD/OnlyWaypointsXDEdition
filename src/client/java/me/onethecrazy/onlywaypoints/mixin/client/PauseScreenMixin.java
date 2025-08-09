@@ -1,14 +1,9 @@
 package me.onethecrazy.mixin.client;
 
-import me.onethecrazy.OnlyWaypoints;
-import me.onethecrazy.screen.WaypointMenuScreen;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawContext;
+import me.onethecrazy.onlywaypoints.screen.WaypointMenuScreen;
 import net.minecraft.client.gui.screen.GameMenuScreen;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.screen.StatsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.gui.widget.Widget;
 import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;

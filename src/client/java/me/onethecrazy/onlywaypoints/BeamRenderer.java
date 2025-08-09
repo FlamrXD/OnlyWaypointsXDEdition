@@ -1,9 +1,6 @@
-package me.onethecrazy.util;
+package me.onethecrazy.onlywaypoints.util;
 
-import com.mojang.blaze3d.opengl.GlStateManager;
 import net.minecraft.client.render.*;
-import net.minecraft.client.render.block.entity.BeaconBlockEntityRenderer;
-import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;

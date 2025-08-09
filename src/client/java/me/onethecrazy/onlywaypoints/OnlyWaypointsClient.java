@@ -1,10 +1,11 @@
-package me.onethecrazy;
+package me.onethecrazy.onlywaypoints;
 
-import me.onethecrazy.commands.Commands;
-import me.onethecrazy.screen.WaypointMenuScreen;
-import me.onethecrazy.util.onlywaypoints.FileUtil;
-import me.onethecrazy.waypoints.WaypointManager;
-import me.onethecrazy.waypoints.objects.Waypoint;
+import me.onethecrazy.OnlyWaypoints;
+import me.onethecrazy.onlywaypoints.Commands;
+import me.onethecrazy.onlywaypoints.screen.WaypointMenuScreen;
+import me.onethecrazy.onlywaypoints.util.FileUtil;
+import me.onethecrazy.onlywaypoints.waypoints.WaypointManager;
+import me.onethecrazy.onlywaypoints.waypoints.objects.Waypoint;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;

@@ -1,6 +1,6 @@
-package me.onethecrazy.screen;
+package me.onethecrazy.onlywaypoints.screen;
 
-import me.onethecrazy.waypoints.WaypointManager;
+import me.onethecrazy.onlywaypoints.waypoints.WaypointManager;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;

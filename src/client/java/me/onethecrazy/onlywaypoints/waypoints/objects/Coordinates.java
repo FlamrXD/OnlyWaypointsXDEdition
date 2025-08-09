@@ -1,4 +1,4 @@
-package me.onethecrazy.waypoints.objects;
+package me.onethecrazy.onlywaypoints.waypoints.objects;
 
 public class Coordinates {
     public int x;

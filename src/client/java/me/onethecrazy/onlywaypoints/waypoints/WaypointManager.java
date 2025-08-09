@@ -1,15 +1,15 @@
-package me.onethecrazy.waypoints;
+package me.onethecrazy.onlywaypoints.waypoints;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import me.onethecrazy.OnlyWaypoints;
-import me.onethecrazy.OnlyWaypointsClient;
+import me.onethecrazy.onlywaypoints.OnlyWaypointsClient;
 import me.onethecrazy.mixin.ServerAccessor;
-import me.onethecrazy.util.BeamRenderer;
-import me.onethecrazy.util.onlywaypoints.FileUtil;
-import me.onethecrazy.waypoints.objects.Coordinates;
-import me.onethecrazy.waypoints.objects.Waypoint;
-import me.onethecrazy.waypoints.objects.WaypointType;
+import me.onethecrazy.onlywaypoints.util.BeamRenderer;
+import me.onethecrazy.onlywaypoints.util.FileUtil;
+import me.onethecrazy.onlywaypoints.waypoints.objects.Coordinates;
+import me.onethecrazy.onlywaypoints.waypoints.objects.Waypoint;
+import me.onethecrazy.onlywaypoints.waypoints.objects.WaypointType;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderContext;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;

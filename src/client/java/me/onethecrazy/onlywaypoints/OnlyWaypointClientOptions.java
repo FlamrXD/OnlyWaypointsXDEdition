@@ -1,4 +1,4 @@
-package me.onethecrazy;
+package me.onethecrazy.onlywaypoints;
 
 public class OnlyWaypointClientOptions {
     public boolean onlyLastDeathWaypoint;

@@ -1,14 +1,11 @@
-package me.onethecrazy.waypoints.objects;
+package me.onethecrazy.onlywaypoints.waypoints.objects;
 
-import me.onethecrazy.waypoints.WaypointManager;
+import me.onethecrazy.onlywaypoints.waypoints.WaypointManager;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.registry.RegistryKey;
-import net.minecraft.text.Text;
 import net.minecraft.world.World;
 
 import java.util.UUID;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Waypoint {
     public RegistryKey<World> dimension;

@@ -1,7 +1,7 @@
 package me.onethecrazy.mixin.client;
 
-import me.onethecrazy.waypoints.WaypointManager;
-import me.onethecrazy.waypoints.objects.Coordinates;
+import me.onethecrazy.onlywaypoints.waypoints.WaypointManager;
+import me.onethecrazy.onlywaypoints.waypoints.objects.Coordinates;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.EntityType;

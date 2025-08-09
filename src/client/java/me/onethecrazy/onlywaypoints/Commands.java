@@ -1,11 +1,11 @@
-package me.onethecrazy.commands;
+package me.onethecrazy.onlywaypoints;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
-import me.onethecrazy.screen.WaypointMenuScreen;
-import me.onethecrazy.waypoints.WaypointManager;
-import me.onethecrazy.waypoints.objects.Waypoint;
+import me.onethecrazy.onlywaypoints.screen.WaypointMenuScreen;
+import me.onethecrazy.onlywaypoints.waypoints.WaypointManager;
+import me.onethecrazy.onlywaypoints.waypoints.objects.Waypoint;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.text.Text;
