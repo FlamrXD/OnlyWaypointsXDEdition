@@ -6,7 +6,7 @@ import me.onethecrazy.OnlyWaypoints;
 import me.onethecrazy.OnlyWaypointsClient;
 import me.onethecrazy.mixin.ServerAccessor;
 import me.onethecrazy.util.BeamRenderer;
-import me.onethecrazy.util.FileUtil;
+import me.onethecrazy.util.onlywaypoints.FileUtil;
 import me.onethecrazy.waypoints.objects.Coordinates;
 import me.onethecrazy.waypoints.objects.Waypoint;
 import me.onethecrazy.waypoints.objects.WaypointType;

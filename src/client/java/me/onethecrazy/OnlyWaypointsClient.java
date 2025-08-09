@@ -2,7 +2,7 @@ package me.onethecrazy;
 
 import me.onethecrazy.commands.Commands;
 import me.onethecrazy.screen.WaypointMenuScreen;
-import me.onethecrazy.util.FileUtil;
+import me.onethecrazy.util.onlywaypoints.FileUtil;
 import me.onethecrazy.waypoints.WaypointManager;
 import me.onethecrazy.waypoints.objects.Waypoint;
 import net.fabricmc.api.ClientModInitializer;

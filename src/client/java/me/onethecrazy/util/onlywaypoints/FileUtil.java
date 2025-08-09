@@ -1,4 +1,4 @@
-package me.onethecrazy.util;
+package me.onethecrazy.util.onlywaypoints;
 
 import com.google.gson.Gson;
 import me.onethecrazy.OnlyWaypointClientOptions;
