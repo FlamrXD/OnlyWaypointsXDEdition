@@ -7,13 +7,14 @@ This Mod is a Quality Of Life Mod generally indented for SMP-like gameplay, thou
 - Waypoints
   - Labels (Displays Name & Distance)
   - Beacon Beams (Fades away as you  get close)
+- Creates a Waypoint when you die
 - Polished GUI with a Vanilla Feel
 - Command Interface
 - Works on Multiplayer and Singleplayer
 
 ## Installing
 
-Download it from [Modrinth](https://modrinth.com/mod/table-of-uncrafting), [CurseForge](https://curseforge.com/minecraft/mc-mods/table-of-uncrafting), or [GitHub Releases](https://github.com/1TheCrazy/TableOfUncrafting/releases)
+Download it from [Modrinth](https://modrinth.com/mod/onlywaypoints), [CurseForge](https://curseforge.com/minecraft/mc-mods/onlywaypoints), or [GitHub Releases](https://github.com/1TheCrazy/OnlyWaypoints/releases)
 
 Then place it inside your `mods` folder for Minecraft.
 
