@@ -1,4 +1,4 @@
-package me.onethecrazy.mixin;
+package me.onethecrazy.onlywaypoints.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.storage.LevelStorage;

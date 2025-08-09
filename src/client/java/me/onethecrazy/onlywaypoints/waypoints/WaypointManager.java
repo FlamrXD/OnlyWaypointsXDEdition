@@ -4,7 +4,7 @@ import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import me.onethecrazy.OnlyWaypoints;
 import me.onethecrazy.onlywaypoints.OnlyWaypointsClient;
-import me.onethecrazy.mixin.ServerAccessor;
+import me.onethecrazy.onlywaypoints.mixin.ServerAccessor;
 import me.onethecrazy.onlywaypoints.mixin.client.GameRendererAccessor;
 import me.onethecrazy.onlywaypoints.util.BeamRenderer;
 import me.onethecrazy.onlywaypoints.util.FileUtil;
